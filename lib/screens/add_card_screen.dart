@@ -50,7 +50,7 @@ class _AddCardState extends State<AddCard> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 70.0,right: 70,top: 100),
-                        child: Image.asset('assets/credit_card.png'),
+                        child: Image.asset('assets/credit.png'),
                       )
                     ),
                     Container(
@@ -176,48 +176,53 @@ class _AddCardState extends State<AddCard> {
                                                         : Form(
                                                             key: _formKey,
                                                             child:
-                                                                TextFormField(
+                                                                Material(
+                                                                  borderRadius: BorderRadius.circular(10),
+                                                                  elevation: 5,
+                                                                  shadowColor: Colors.black,
+                                                                  child: TextFormField(
                                                               validator:
-                                                                  (value) {
-                                                                if (value ==
-                                                                        null ||
-                                                                    value
-                                                                        .isEmpty) {
-                                                                  return 'Please enter comment';
-                                                                }
-                                                                return null;
+                                                                    (value) {
+                                                                  if (value ==
+                                                                          null ||
+                                                                      value
+                                                                          .isEmpty) {
+                                                                    return 'Please enter comment';
+                                                                  }
+                                                                  return null;
                                                               },
                                                               controller:
-                                                                  commentController,
+                                                                    commentController,
                                                               maxLines: 2,
                                                               decoration:
-                                                                  InputDecoration(
-                                                                contentPadding:
-                                                                    const EdgeInsets
-                                                                            .only(
-                                                                        left:
-                                                                            10,
-                                                                        top: 4,
-                                                                        bottom:
-                                                                            4),
-                                                                fillColor: Colors
-                                                                    .indigo
-                                                                    .shade100,
-                                                                filled: true,
-                                                                hintText:
-                                                                    'Comments',
+                                                                    InputDecoration(
+                                                                  contentPadding:
+                                                                      const EdgeInsets
+                                                                              .only(
+                                                                          left:
+                                                                              10,
+                                                                          top: 4,
+                                                                          bottom:
+                                                                              4),
+                                                                  fillColor: Colors
+                                                                      .indigo
+                                                                      .shade100,
+                                                                  filled: true,
+                                                                  hintText:
+                                                                      'Comments',
 
-                                                                border: OutlineInputBorder(
+                                                                  border: OutlineInputBorder(
 
-                                                                    borderRadius:
-                                                                        BorderRadius
-                                                                            .circular(
-                                                                                10),
-                                                                    borderSide:
-                                                                        BorderSide
-                                                                            .none),
+                                                                      borderRadius:
+                                                                          BorderRadius
+                                                                              .circular(
+                                                                                  10),
+                                                                      borderSide:
+                                                                          BorderSide
+                                                                              .none),
                                                               ),
                                                             ),
+                                                                ),
                                                           ),
                                                     actions: [
                                                       ElevatedButton(
